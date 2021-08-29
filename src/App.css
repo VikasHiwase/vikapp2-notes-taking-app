@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: lightgoldenrodyellow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 100%;
+  line-height: 100px;
+  background-color: gold;
   display: flex;
-  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 50px;
+  color: white;
+  box-shadow: 5px 3px 15px -5px rgba(0, 0, 0, 0.6);
+}
+
+.header h1 {
+  text-shadow: 1px 3px 8px black;
+}
+
+.main_note {
+  width: 500px;
+  padding: 15px 10px 5px 10px;
+  margin: 20px auto;
+}
+
+.my_notes h1 {
+  color: darkslategray;
+}
+
+.my_notes p {
+  color: gray;
+}
+
+form {
+  min-height: 50px;
+  color: lightgrey;
+  padding: 15px 10px 5px 10px;
+  box-shadow: 3px 5px 15px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.note {
+  background: lightyellow;
+  /* background: gray; */
+  border-radius: 7px;
+  box-shadow: 0 2px 5px lightgray;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.note h1 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note .btn {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: gold;
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 3px 3px 15px -10px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+
+.note .btn:hover {
+  background-color: gold;
+}
+
+.note .btn:hover .deleteIcon {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiButton-root {
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  bottom: -28px;
+  left: 400px;
+  cursor: pointer;
+  /* background-color: white; */
+  background-color: darkgreen;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 50% !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiButton-root .plus_sign {
+  font-size: 45px;
+  font-weight: 900;
+  color: gold;
+  cursor: pointer;
+  z-index: 222;
+  background: transparent;
+}
+
+.MuiButton-root:hover {
+  background-color: gold !important;
+}
+
+.MuiButton-root:hover .plus_sign {
+  color: white;
+  background: transparent;
+}
+
+.deleteIcon {
+  width: 0.7em;
+  height: 0.7em;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  justify-content: center;
 }
